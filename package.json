@@ -1,0 +1,27 @@
+{
+  "name": "chrad",
+  "version": "1.0.0",
+  "description": "Web App for chilerad",
+  "main": "index.js",
+  "scripts": {
+    "lint": "node node_modules/eslint/bin/eslint.js index.js",
+    "start": "npm run lint && babel-node ./index.js",
+    "auto-start": "nodemon --exec \"npm start\" --ignore public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siarcarse/chrad.git"
+  },
+  "author": "siarcarse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siarcarse/chrad/issues"
+  },
+  "homepage": "https://github.com/siarcarse/chrad#readme",
+  "dependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.17.1",
+    "hapi": "^16.1.0"
+  }
+}
