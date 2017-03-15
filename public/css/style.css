@@ -1,0 +1,119 @@
+/*body{
+    background-color: #FF5445;
+}*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.login-form {
+    margin: 50px auto;
+    max-width: 360px;
+}
+
+.login-form > section {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-form > section img {
+    margin-bottom: 20px;
+}
+
+.login-form > section a {
+    color: #657fed;
+}
+
+.login-form h4 {
+    font-weight: normal;
+    font-size: 20px;
+    color: #737373;
+    margin-bottom: 20px;
+}
+
+form[role=login] {
+    font: 15px/2.2em Lato, serif;
+    color: #555;
+    background: #f7f7f7;
+    padding: 40px;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+    box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+}
+
+form[role=login] img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+form[role=login] input,
+form[role=login] button {
+    font-size: 17px;
+}
+
+form[role=login] input {
+    color: #989898;
+    background: #fff;
+    border: 1px solid #c0c0c0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    position: relative;
+    z-index: 999;
+}
+
+form[role=login] input:focus {
+    z-index: 1000;
+}
+
+form[role=login] input[type=email] {
+    margin-bottom: -1px;
+}
+
+form[role=login] input::-webkit-input-placeholder {
+    color: #c0c0c0;
+}
+
+form[role=login] input:-moz-placeholder {
+    color: #c0c0c0;
+}
+
+form[role=login] input::-moz-placeholder {
+    color: #c0c0c0;
+}
+
+form[role=login] input:-ms-input-placeholder {
+    color: #c0c0c0;
+}
+
+form[role=login] button {
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #e65252;
+    border: 1px solid #e65252;
+    background: #e65252;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    -webkit-box-shadow: inset 0 1px 2px 0 rgba( 255, 255, 255, .3);
+    -moz-box-shadow: inset 0 1px 2px 0 rgba( 255, 255, 255, .3);
+    box-shadow: inset 0 1px 2px 0 rgba( 255, 255, 255, .3);
+}
+
+form[role=login] button:hover {
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #F45B52;
+    border: 1px solid #F45B52;
+    background: #F45B52;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    -webkit-box-shadow: inset 0 1px 2px 0 rgba( 255, 255, 255, .3);
+    -moz-box-shadow: inset 0 1px 2px 0 rgba( 255, 255, 255, .3);
+    box-shadow: inset 0 1px 2px 0 rgba( 255, 255, 255, .3);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <title>..:: Intranet ::..</title>
+    <!-- Default Page CSS -->
+    <link rel="stylesheet" type="text/css" href="/public/css/global/default.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="/public/css/global/animate.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="/public/js/bootstrap/css/bootstrap.paper.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href="/public/css/font-awesome/css/font-awesome.css">
+    {{#block "css"}}
+    {{/block}}
+</head>
+
+<body>
+    <div class="container">
+        {{! Everything else gets inserted here }}
+        {{{content}}}
+    </div>
+    <!-- jQuery -->
+    <script src="/public/js/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/public/js/bootstrap/js/bootstrap.js"></script>
+    <!-- Notify JS -->
+    <script src="/public/tools/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <!-- Moment JS -->
+    <script src="/public/js/global/moment.js"></script>
+    <!-- Default Global JS -->
+    <script src="/public/js/global/default.js"></script>
+    {{#block "js"}}
+    {{/block}}
+</body>
+
+</html>
