@@ -1,0 +1,54 @@
+{{!< layout/default}}
+{{#extend "css"}}
+    <link rel="stylesheet" type="text/css" href="/public/tools/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css">
+    <!-- Many more Header insertions  -->
+{{/extend}}
+{{> header}}
+<div class="row">
+    <div class="col-md-offset-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="hidden-xs hidden-sm  text-center">
+                    <span class="label" style="background: red;">No Visto</span>
+                    <span class="label" style="background: #2271BA;">Solicitado</span>
+                    <span class="label" style="background: orange;">Asignado</span>
+                    <span class="label" style="background: grey;">En Proceso</span>
+                    <span class="label" style="background: green">Validado</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" id="idate">
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" id="fdate">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Basic panel example
+            </div>
+        </div>
+    </div>
+</div>
+{{#extend "js"}}
+    <!-- Many more JS insertions  -->
+    <script type="text/javascript" src="/public/tools/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="/public/tools/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js"></script>
+    <script type="text/javascript">
+    $('#idate, #fdate').datepicker({
+        format: "dd-mm-yyyy",
+        weekStart: 1,
+        maxViewMode: 2,
+        language: "es",
+        daysOfWeekHighlighted: "0",
+        autoclose: true
+    });
+    </script>
+{{/extend}}

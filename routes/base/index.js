@@ -1,3 +1,6 @@
+import apiRules from '../api/'
+import examsRules from './exams'
+
 const Index = {
     method: ['GET', 'POST'],
     path: '/',
@@ -25,6 +28,8 @@ const Public = {
 };
 const rules = [].concat(
     Public,
-    Index
+    Index,
+    examsRules,
+    apiRules
 );
 export default rules;

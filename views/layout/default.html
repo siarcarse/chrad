@@ -16,12 +16,24 @@
     <link rel="stylesheet" type="text/css" href="/public/js/bootstrap/css/bootstrap.paper.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" type="text/css" href="/public/css/font-awesome/css/font-awesome.css">
+    <style type="text/css">
+    .navbar-brand {
+        padding: 0px;
+    }
+
+    .navbar-brand>img {
+        height: 100%;
+        padding: 15px;
+        width: auto;
+        filter: grayscale(100%);
+    }
+    </style>
     {{#block "css"}}
     {{/block}}
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         {{! Everything else gets inserted here }}
         {{{content}}}
     </div>
