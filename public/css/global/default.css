@@ -18,3 +18,15 @@
 .fa-select {
     font-family: Arial, 'FontAwesome';
 }
+.validated {
+    color: green;
+}
+.unviewed {
+    color: red;
+}
+.requested {
+    color: #2271BA;
+}
+.in-process {
+    color: grey;
+}

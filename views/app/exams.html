@@ -1,6 +1,9 @@
 {{!< layout/default}}
 {{#extend "css"}}
     <link rel="stylesheet" type="text/css" href="/public/tools/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/tools/DataTables/media/css/dataTables.bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/public/tools/DataTables/extensions/Responsive/css/responsive.bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/public/tools/DataTables/extensions/Select/css/select.bootstrap.css" />
     <!-- Many more Header insertions  -->
 {{/extend}}
 {{> header}}
@@ -32,23 +35,38 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="panel panel-default">
             <div class="panel-body">
-                Basic panel example
+                <table id="dTable" class="table table-condensed" summary="" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Estado</th>
+                            <th>Paciente</th>
+                            <th>Fecha</th>
+                            <th>Desc</th>
+                            <th>Institución</th>
+                            <th>Nº IMG</th>
+                            <th>Solicitud</th>
+                            <th>Mod</th>
+                            <th class="all">Prioridad</th>
+                            <th>Chat</th>
+                            <th>Crítico</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
         </div>
     </div>
 </div>
 {{#extend "js"}}
     <!-- Many more JS insertions  -->
+    <script type="text/javascript" src="/public/tools/DataTables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/public/tools/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="/public/tools/DataTables/extensions/Responsive/js/dataTables.responsive.js"></script>
+    <script type="text/javascript" src="/public/tools/DataTables/extensions/Responsive/js/responsive.bootstrap.js"></script>
+    <script type="text/javascript" src="/public/tools/DataTables/extensions/Select/js/dataTables.select.js"></script>
     <script type="text/javascript" src="/public/tools/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="/public/tools/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js"></script>
-    <script type="text/javascript">
-    $('#idate, #fdate').datepicker({
-        format: "dd-mm-yyyy",
-        weekStart: 1,
-        maxViewMode: 2,
-        language: "es",
-        daysOfWeekHighlighted: "0",
-        autoclose: true
-    });
-    </script>
+    <script type="text/javascript" src="/public/js/app/exams/datatables.js"></script>
+    <script type="text/javascript" src="/public/js/app/exams/controller.js"></script>
+    <script type="text/javascript" src="/public/js/app/exams/main.js"></script>
 {{/extend}}
