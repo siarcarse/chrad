@@ -19,10 +19,10 @@ const studiesRules = [{
                                 ELSE mods_in_study
                             END AS mods_in_study,
                             unnest(array_remove(array_agg( DISTINCT series.institution), NULL)) AS institution,
-                            study_datetime, orden, accession_no, study_status AS status, study.users_inf, comment_num AS chat,
+                            to_char(study_datetime, 'YYYY-MM-DD HH24:MI:SS') AS study_datetime, orden, accession_no, study_status AS status, study.users_inf, comment_num AS chat,
                             study.study_custom1 AS prioridad, study.request_time AS request, study.num_instances AS imagenes, study.study_custom3 AS critico, study.study_custom4 AS comment,
                             study.study_custom2 AS infomed,
-                            (SELECT to_char((NOW() - study.request_time), 'DD "dias"-HH24 "hrs"-MI "min"')) as tiempo, study_desc, study.pk, pat_name, pat_id
+                            (SELECT to_char((NOW() - study.request_time), 'DD "dias"-HH24 "hrs"-MI "min"')) as tiempo, study_desc, study.pk, replace(replace(pat_name, '^^^', ''), '^', ' ') AS pat_name, pat_id
                         FROM study
                         LEFT JOIN patient ON patient.pk=study.patient_fk
                         LEFT JOIN series ON series.study_fk=study.pk

@@ -18,15 +18,37 @@
 .fa-select {
     font-family: Arial, 'FontAwesome';
 }
+
 .validated {
     color: green;
 }
+
 .unviewed {
     color: red;
 }
+
 .requested {
     color: #2271BA;
 }
+
 .in-process {
     color: grey;
+}
+
+.badge-notify {
+    position: relative;
+    top: -14px;
+    left: -11px;
+}
+
+.chat-icon-container {
+    cursor: pointer;
+}
+
+.chat-read {
+    background: rgba(124, 137, 175, 0.85) !important;
+}
+
+.chat-unread {
+    background: rgba(202, 36, 36, 0.85) !important;
 }

@@ -1,0 +1,61 @@
+{{!< layout/default}}
+{{#extend "css"}}
+    <style type="text/css">
+    .panel-report {
+        padding: 0;
+    }
+    
+    .panel-large {
+        height: 99vh;
+    }
+    </style>
+{{/extend}}
+<div class="row">
+    <div class="col-md-3 visible-md visible-lg">
+        <div class="panel panel-large panel-default">
+            <div class="panel-body">
+                Basic panel example
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-large panel-primary">
+            <div class="panel-heading panel-report">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-left">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-eye-slash fa-2x" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+                    <button type="button" class="btn btn-success">VALIDAR</button>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-eye-slash fa-2x" aria-hidden="true"></i></button>
+                </div>
+                <h1 class="panel-title text-center">Informe Paciente: <b id="patient-text">Juan Perez Cotapo</b></h1>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-6 col-lg-6">
+                    <select name="" id="template" class="form-control">
+                        <option value="asd">Seleccione plantilla</option>
+                    </select>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <select name="exams[]" id="exams" class="form-control">
+                        <option value="asd">Seleccione Examen</option>
+                        <option value="asd">ABDOMEN</option>
+                        <option value="asd">PELVIS</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 visible-md visible-lg">
+        <div class="panel panel-large panel-default">
+            <div class="panel-body">
+                Basic panel example
+            </div>
+        </div>
+    </div>
+</div>
+{{#extend "js"}}
+    <!-- Many more JS insertions  -->
+{{/extend}}

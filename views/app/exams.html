@@ -4,11 +4,15 @@
     <link rel="stylesheet" type="text/css" href="/public/tools/DataTables/media/css/dataTables.bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/public/tools/DataTables/extensions/Responsive/css/responsive.bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/public/tools/DataTables/extensions/Select/css/select.bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/public/css/app/chatbox.css" />
     <!-- Many more Header insertions  -->
 {{/extend}}
+<!-- Inlude ( Header ) Partial -->
 {{> header}}
-<div class="row">
-    <div class="col-md-offset-3 col-md-6">
+<!-- Inlude ( ChatBox - Modal ) Partial -->
+{{> chatbox}}
+<div class="row" style="zoom: 85%;">
+    <div class="col-md-offset-4 col-md-4">
         <div class="panel panel-primary">
             <div class="panel-body">
                 <div class="hidden-xs hidden-sm  text-center">
@@ -26,7 +30,7 @@
                         <input type="text" class="form-control" id="fdate">
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary">Buscar</button>
+                        <button id="search" type="button" class="btn btn-primary">Buscar</button>
                     </div>
                 </div>
             </div>
@@ -35,7 +39,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="panel panel-default">
             <div class="panel-body">
-                <table id="dTable" class="table table-condensed" summary="" style="width:100%;">
+                <table id="dTable" class="table table-condensed" summary="" cellspacing="0" style="width:100%;">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -48,8 +52,8 @@
                             <th>Solicitud</th>
                             <th>Mod</th>
                             <th class="all">Prioridad</th>
-                            <th>Chat</th>
-                            <th>Crítico</th>
+                            <th>Comentarios</th>
+                            <th class="not-desktop">Acciones</th>
                         </tr>
                     </thead>
                 </table>
@@ -66,7 +70,7 @@
     <script type="text/javascript" src="/public/tools/DataTables/extensions/Select/js/dataTables.select.js"></script>
     <script type="text/javascript" src="/public/tools/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="/public/tools/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js"></script>
-    <script type="text/javascript" src="/public/js/app/exams/datatables.js"></script>
     <script type="text/javascript" src="/public/js/app/exams/controller.js"></script>
+    <script type="text/javascript" src="/public/js/app/exams/datatables.js"></script>
     <script type="text/javascript" src="/public/js/app/exams/main.js"></script>
 {{/extend}}

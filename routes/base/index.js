@@ -1,5 +1,6 @@
 import apiRules from '../api/'
 import examsRules from './exams'
+import reportRules from './report'
 
 const Index = {
     method: ['GET', 'POST'],
@@ -30,6 +31,7 @@ const rules = [].concat(
     Public,
     Index,
     examsRules,
+    reportRules,
     apiRules
 );
 export default rules;
