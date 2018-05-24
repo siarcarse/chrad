@@ -1,14 +1,24 @@
 {
+    "ecmaFeatures": {
+        "templateStrings": true // enable template strings
+    },
     "env": {
         "node": true,
-        "es6": true
+        "es6": true,
+        "jquery": true,
+        "browser": true
     },
     "parserOptions": {
         "sourceType": "module",
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "templateStrings": true, // enable template strings
+            "blockBindings": true
+        }
     },
     "rules": {
-        "brace-style": [2, "stroustrup"],
         "camelcase": 1,
+        "prefer-template": 1,
         "new-cap": 0,
         "semi": [1, "always"],
         "quotes": [1, "single"],
@@ -21,7 +31,6 @@
         "no-spaced-func": 1,
         "semi-spacing": 1,
         "no-trailing-spaces": 1,
-        "no-underscore-dangle": 1,
         "no-mixed-spaces-and-tabs": 1,
         "sort-vars": 1,
         "object-curly-spacing": [1, "always"],
@@ -45,9 +54,8 @@
         "comma-dangle": 1,
         "no-sparse-arrays": 1,
         "no-ex-assign": 1,
-        "indent": [
-            "warn",
-            4
-        ]
+        "indent": ["error", 4, {
+            "SwitchCase": 1
+        }]
     }
 }
